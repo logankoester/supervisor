@@ -125,3 +125,7 @@ when "smartos"
     action [:enable]
   end
 end
+
+if node['supervisor']['run_command']
+  execute node['supervisor']['run_command']
+end
